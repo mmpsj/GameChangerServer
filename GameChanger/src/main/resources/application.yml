@@ -1,0 +1,14 @@
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  config:
+    import: optional:classpath:application-private.yml
+
+cloud:
+  aws:
+    s3:
+      bucket: t-shirt-design-bucket
+    stack:
+      auto: false
+    region:
+      static: ap-northeast-2
